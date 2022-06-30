@@ -1,0 +1,392 @@
+
+
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  background-image: url(image/destacados.jpg);
+  /*background-repeat: no-repeat;*/
+  background-position:center;
+  background-size: cover;
+  color: white;
+}
+
+h1{
+  font-size: 70px;
+  margin-left: 5px;
+}
+
+h2{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+  font-size:23px;
+  color:white;
+  text-align: center;
+  padding: 5px;
+  }
+
+  nav{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .bar-btn{
+    font-size:25px;
+    color: white;
+    margin-right: 20px;
+    cursor: pointer;
+    margin-left:6px;
+  
+  }
+  .nav-menu{
+    position:fixed;
+    width: 100%;
+    height: 0vh;
+    top: 100px;
+    background: rgb(0, 0, 0);
+    text-align: center;
+    transition:all .5s;
+  }
+  
+  .nav-menu li{
+    display: none;
+    line-height:30px;
+    margin: 50px 0 0 0;
+    transition:all .5s;
+  }
+  
+  .nav-menu li a{
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight:600;
+  }
+  
+  .nav-menu li a.active, .nav-menu li a:hover{
+    color: red;
+    transition: .3s;
+  }
+  
+  #check{
+    display: none;
+  }
+  
+  #check:checked ~ .nav-menu{
+    height: 100vh;
+  }
+  
+  #check:checked ~ .nav-menu li{
+    display: block
+  }
+  
+  .banner-text{
+    padding:0 30px;
+    margin-top: 150px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .banner-text h1{
+    font-size: 50px;
+    font-weight: 2000;
+    margin-bottom: 30px;
+  }
+  
+  .banner-text span{
+    color: red;
+  }
+  .banner-text h2{
+    font-size: 16px;
+    font-weight:600;
+  }
+
+
+.form-contact{
+  width: 400px;
+  background-color: rgba(168, 14, 14, 0.658);
+  padding: 30px;
+  margin: auto;
+  margin-top: 25px;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  box-shadow: 7px 13px 37px  #000;  
+}
+
+.form-contact h4{
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.controls {
+  width: 100%;
+  background: rgb(104, 9, 9);
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid red;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  color: white;
+}
+
+  .form-contact p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+  }
+
+  .form-contact a {
+    color: white;
+    text-decoration: none;
+  }
+  .form-register a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+
+  .form-contact .botons {
+    width: 100%;
+    background: rgb(205, 15, 15);
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    border-radius:6px;
+  }
+  
+  .contact {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    z-index: 10;
+  }
+  
+.contact .fixed-mail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1d1d1d91;
+    padding: 15px;
+    border-radius: 100%;
+    margin: 10px;
+  }
+  
+.contact .fixed-wp {
+    background-color: #1d1d1d91;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 100%;
+    margin: 10px;
+    text-align: center;
+  }
+  
+.contact a i{
+    font-size: 50px;
+    color: white;
+  }
+
+  @media(max-width: 768px){
+    h1{
+      font-size: 50px;
+      text-align: center;
+    }
+
+  
+    h3{
+      font-family: 'Montserrat', sans-serif;
+      font-weight: lighter;
+      font-size:18px;
+      color:white;
+      text-align: center;
+      padding: 10px;
+      }
+    p{
+      font-size: 55px;
+  }
+    img {
+      box-sizing: border-box;  
+      box-shadow: 5px 5px 5px 5px #000000; 
+      margin:10px; 
+    }
+   
+    .form-contact{
+      width: 310px;
+      background-color: rgba(168, 14, 14, 0.658);
+      padding: 30px;
+      margin: auto;
+      margin-top: 25px;
+      border-radius: 4px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: white;
+      box-shadow: 7px 13px 37px  #000;  
+    }
+    
+    .form-contact h4{
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  
+    .controls {
+      width: 100%;
+      background: rgb(104, 9, 9);
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+      border: 1px solid red;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px;
+      color: white;
+    }
+  
+    .form-contact p {
+      height: 40px;
+      text-align: center;
+      font-size: 18px;
+      line-height: 40px;
+    }
+  
+    .form-contact a {
+      color: white;
+      text-decoration: none;
+    }
+    .form-register a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+  
+    .form-contact .botons {
+      width: 100%;
+      background: rgb(205, 15, 15);
+      border: none;
+      padding: 12px;
+      color: white;
+      margin: 16px 0;
+      font-size: 16px;
+      border-radius:6px;
+    }
+  }
+  @media(max-width: 320px){
+    h1{
+      font-size: 40px;
+      text-align: center;
+    }
+
+    h3{
+      font-family: 'Montserrat', sans-serif;
+      font-weight: lighter;
+      font-size:18px;
+      color:white;
+      text-align: center;
+      padding: 10px;
+      }
+    p{
+      font-size: 55px;
+    }
+  
+  .form-contact{
+    width: 200px;
+    background-color: rgba(168, 14, 14, 0.658);
+    padding: 30px;
+    margin: auto;
+    margin-top: 25px;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    box-shadow: 7px 13px 37px  #000;  
+  }
+  
+  .form-contact h4{
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .controls {
+    width: 100%;
+    background: rgb(104, 9, 9);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid red;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: white;
+  }
+
+  .form-contact p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+  }
+
+  .form-contact a {
+    color: white;
+    text-decoration: none;
+  }
+  .form-register a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+
+  .form-contact .botons {
+    width: 100%;
+    background: rgb(205, 15, 15);
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    border-radius:6px;
+  }
+  
+  }
+  @media screen and (min-width: 768px) {
+    nav{
+        height: 100px;
+    }
+    .bar-btn{
+        display: none;
+    }
+  
+    .nav-menu{
+        position: relative;
+        height: 100px;
+        top: 0;
+        background: none;
+        transition: none;
+        text-align:center;
+        margin: right 50px;
+    }
+  
+    .nav-menu li {
+        display: inline-flex;
+        line-height:100px;
+        margin: 0 20px;
+        transition:none;
+    }
+  
+    .nav-menu li a {
+        font-size:16px;
+    }
+  
+    .banner-text h2{
+        font-size:20px;
+    }
+  }
+  
+  
+

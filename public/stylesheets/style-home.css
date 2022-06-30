@@ -1,0 +1,682 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  background-image: url(images/home.jpg);
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+  color: white;
+}
+
+h1{
+  font-size: 70px;
+  margin-left: 5px;
+}
+
+/*Menu desplegable*/
+nav{
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bar-btn{
+  font-size:25px;
+  color: white;
+  margin-right: 20px;
+  cursor: pointer;
+  margin-left:6px;
+
+}
+.nav-menu{
+  position:fixed;
+  width: 100%;
+  height: 0vh;
+  top: 100px;
+  background: rgb(0, 0, 0);
+  text-align: center;
+  transition:all .5s;
+}
+
+.nav-menu li{
+  display: none;
+  line-height:30px;
+  margin: 50px 0 0 0;
+  transition:all .5s;
+}
+
+.nav-menu li a{
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight:600;
+}
+
+.nav-menu li a.active, .nav-menu li a:hover{
+  color: red;
+  transition: .3s;
+}
+
+#check{
+  display: none;
+}
+
+#check:checked ~ .nav-menu{
+  height: 100vh;
+}
+
+#check:checked ~ .nav-menu li{
+  display: block
+}
+
+.banner-text{
+  padding:0 30px;
+  margin-top: 150px;
+  text-align: center;
+  color: #fff;
+}
+
+.banner-text h1{
+  font-size: 50px;
+  font-weight: 2000;
+  margin-bottom: 30px;
+}
+
+.banner-text span{
+  color: red;
+}
+.banner-text h2{
+  font-size: 16px;
+  font-weight:600;
+}
+
+/*Textos e Imagenes*/
+
+h2{
+
+  font-weight: lighter;
+  font-size:23px;
+  color:white;
+  text-align: center;
+  padding: 10px;
+  }
+
+h3{
+  font-weight: lighter;
+  font-size:18px;
+  color:white;
+  text-align: center;
+  padding: 10px;
+  }
+
+
+span{
+    font-size:40px;
+    color:red;
+    text-align: center;
+    padding: 10px;
+  }
+
+
+img {
+  box-sizing: border-box;  
+  border-radius: 30px;
+  width: 5px;
+  }
+
+/*Video link YouTube*/
+.contenedor-detalle .caja-video {
+  overflow: hidden;
+  padding-bottom: 400px;
+  position: relative;
+  height: 0;
+  max-width: 960px;
+  }
+
+.video-responsive {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    position: relative;
+    }
+.video-responsive iframe, .video-responsive object, .video-responsive embed {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    }
+
+.contenedor-detalle .caja-video * {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  }
+
+/*Footer y pie de pagina*/
+
+footer{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  padding-bottom: 15px;
+  }
+
+footer .principal{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1900px;
+  font-size: 18px;
+  text-align: center;
+  }
+
+footer .text{
+  display: flex;
+  flex-direction: column;
+  justify-content: c;
+  align-items: center;
+}
+
+footer .principal div{
+  margin: 10px;
+  padding: 5px;
+  max-width: 250px;
+}
+
+footer .principal .text img{
+  width: 250px;
+}
+
+footer .social-media-menu ul{
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .social-media-menu ul li{
+  font-size: 50px;
+  padding: 15px;
+  list-style:none; /*sacamos las viñetas de la lista*/
+}
+
+
+footer .links h3{
+  text-align: center;
+}
+
+footer .links ul{
+  padding: 0px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .links ul li{
+  font-size: 1.1em;
+  padding: 15px;
+  list-style:none;/*sacamos las viñetas de la lista*/
+}
+
+footer .links ul li a :hover {
+  background-color : #1d1d1d;
+  cursor:pointer;
+}
+
+footer ul li a{
+  color: white;
+  text-decoration: none;
+}
+
+.contact {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  z-index: 10;
+}
+
+.contact .fixed-mail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1d1d1d91;
+  padding: 15px;
+  border-radius: 100%;
+  margin: 10px;
+}
+
+.contact .fixed-wp {
+  background-color: #1d1d1d91;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 100%;
+  margin: 10px;
+  text-align: center;
+}
+
+.contact a i{
+  font-size: 50px;
+  color: white;
+}
+
+
+/*EL EFECTO HOVER EN FOTOS*/
+.guitarras .guitarras-list {
+  padding: 0px;
+  width: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top:0;
+}
+
+.guitarras .guitarras-list li {
+  position: relative;
+  width: 270px;
+  height: 475px;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.guitarras .guitarras-list li img {
+  /*height: inherit;*/
+  width: 100%;
+  padding: 10px;  
+}
+
+.guitarras .guitarras-list li .guitarras-description {
+  position: absolute;
+  background-color: #1d1d1dad;
+  color: white;
+  height: 80%;
+  right: 0px;
+  bottom: 0px;
+  width: inherit;
+  transform: translate(0%, 100%);
+  transition: transform;
+  transition-duration: .75s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.guitarras .guitarras-list li:hover .guitarras-description {
+  transform: translate(0%, 0%);
+}
+
+.guitarras .guitarras-list li .guitarras-description .guitarras-description-items {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 10px;
+}
+
+.guitarras .guitarras-list li .guitarras-description .guitarras-descrition-items h2 {
+  text-align: center;
+  font-size: medium;
+}
+
+.guitarras .guitarras-list li .guitarras-description .deatil-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.guitarras .guitarras-list li .guitarras-description .deatil-buttons i {
+  margin: 5px;
+}
+
+.guitarras .guitarras-list li .guitarras-description .deatil-buttons a {
+  font-size: 20px;
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+  background-color: rgba(168, 14, 14, 0.658);
+  border-radius: 6px;
+  height: 50px;
+  border: 0px;
+  text-align: center;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+/*TERMINA CODIGO PARA HOVER*/
+
+@media(max-width: 768px){
+
+
+  h1{
+    font-size: 50px;
+    text-align: center;
+  }
+
+  h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    font-size:20px;
+    color:white;
+    text-align: center;
+    padding: 25px 0px 0px 0px;
+    }
+
+  p{
+    font-size: 7px;
+    }
+
+  img {
+    box-sizing: border-box; 
+    }
+    .nav-menu{
+      position:fixed;
+      z-index: 50;
+      width: 100%;
+      height: 0vh;
+      top: 100px;
+      background: rgb(0, 0, 0);
+      text-align: center;
+      transition:all .5s;
+    }
+
+  div.video{
+    text-align: center;
+    width: 100%;
+    }
+
+  .guitarras .guitarras-list li {
+    position: relative;
+    width: 270px;
+    height: 290px;
+    margin: 20px -84px 0px 0px;
+    overflow: hidden;
+    }
+
+  .guitarras .guitarras-list li img {
+    /*height: inherit;*/
+    width: 65%;
+    /*padding: 10px;*/  
+    }
+
+  .guitarras .guitarras-list li .guitarras-description {
+    position: inherit;
+    background-color: #1d1d1dad;
+    color: white;
+    height: 45%;
+    right: -7px;
+    bottom: 140px;
+    width: 60%;
+    transform: translate(0%, 100%);
+    transition: transform;
+    transition-duration: .75s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    }
+  
+  .guitarras .guitarras-list li:hover .guitarras-description {
+    transform: translate(0%, 0%);
+    }
+  
+  .guitarras .guitarras-list li .guitarras-description .guitarras-description-items {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px;
+    }
+  
+  .guitarras .guitarras-list li .guitarras-description .guitarras-descrition-items h2 {
+    text-align: center;
+    font-size: medium;
+    }
+  
+  .guitarras .guitarras-list li .guitarras-description .deatil-buttons {
+    display: flex;
+    flex-direction: column; 
+    }
+  
+  .guitarras .guitarras-list li .guitarras-description .deatil-buttons i {
+    margin: 5px;
+    }
+  
+  .guitarras .guitarras-list li .guitarras-description .deatil-buttons a {
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    background-color: rgba(168, 14, 14, 0.658);
+    border-radius: 6px;
+    height: 40px;
+    border: 0px;
+    text-align: center;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    }
+}
+
+
+
+@media(max-width: 320px){
+
+  h1{
+    font-size: 40px;
+    text-align: center;
+  }
+
+  h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    font-size:20px;
+    color:white;
+    text-align: center;
+    padding: 25px 0px 0px 0px;
+    }
+
+  p{
+    font-size: 7px;
+    }
+
+  div.video{
+    text-align: center;
+    width: 100%;
+    }
+
+  .guitarras .guitarras-list li {
+    position: relative;
+    width: 270px;
+    height: 290px;
+    margin: 20px -84px 0px 0px;
+    overflow: hidden;
+    }
+
+  .guitarras .guitarras-list li img {
+    /*height: inherit;*/
+    width: 65%;
+    /*padding: 10px;*/  
+    }
+  
+  .guitarras .guitarras-list li .guitarras-description {
+    position: inherit;
+    background-color: #1d1d1dad;
+    color: white;
+    height: 45%;
+    right: -7px;
+    bottom: 140px;
+    width: 60%;
+    transform: translate(0%, 100%);
+    transition: transform;
+    transition-duration: .75s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    }
+ 
+  }
+  
+  .guitarras .guitarras-list li:hover .guitarras-description {
+    transform: translate(0%, 0%);
+    }
+  
+  .guitarras .guitarras-list li .guitarras-description .guitarras-description-items {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px;
+    }
+  
+  .guitarras .guitarras-list li .guitarras-description .guitarras-descrition-items h2 {
+    text-align: center;
+    font-size: medium;
+    }
+  
+  .guitarras .guitarras-list li .guitarras-description .deatil-buttons {
+    display: flex;
+    flex-direction: column;
+    }
+  
+  .guitarras .guitarras-list li .guitarras-description .deatil-buttons i {
+    margin: 5px;
+    }
+  
+  .guitarras .guitarras-list li .guitarras-description .deatil-buttons a {
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    background-color: rgba(168, 14, 14, 0.658);
+    border-radius: 6px;
+    height: 50px;
+    border: 0px;
+    text-align: center;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    }
+  
+
+@media(max-width: 280px){
+  .guitarras .guitarras-list li .guitarras-description {
+    position: absolute;
+    background-color: #1d1d1dad;
+    color: white;
+    height: 40%;
+    right: 0px;
+    bottom: 62px;
+    width: 100%;
+    transform: translate(0%, 100%);
+    transition: transform;
+    transition-duration: .75s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+
+  .guitarras .guitarras-list li .guitarras-description .deatil-buttons {
+    display: flex;
+    flex-direction: column;
+    }
+  
+  .guitarras .guitarras-list li .guitarras-description .deatil-buttons i {
+    margin: 5px;
+    }
+  
+  .guitarras .guitarras-list li .guitarras-description .deatil-buttons a {
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    background-color: rgba(168, 14, 14, 0.658);
+    border-radius: 6px;
+    height: 50px;
+    border: 0px;
+    text-align: center;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+  nav{
+      height: 100px;
+    }
+
+  .bar-btn{
+      display: none;
+    }
+
+  .nav-menu{
+      position: relative;
+      height: 100px;
+      top: 0;
+      background: none;
+      transition: none;
+      text-align:center;
+      margin: right 50px;
+    }
+
+  .nav-menu li {
+      display: inline-flex;
+      line-height:100px;
+      margin: 0 20px;
+      transition:none;
+    }
+
+  .nav-menu li a {
+      font-size:16px;
+    }
+
+  .banner-text h2{
+      font-size:20px;
+  }
+}
+
+

@@ -1,0 +1,426 @@
+
+
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  background-image: url(image/destacados.jpg);
+  /*background-repeat: no-repeat;*/
+  background-position:center;
+  background-size: cover;
+  color: white;
+}
+
+h1{
+  font-size: 70px;
+  margin-left: 5px;
+}
+
+h2{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+  font-size:20px;
+  color:white;
+  text-align: center;
+  padding: 5px;
+  }
+  p{
+    font-size: 11px;
+    padding: 10px 5px 11px 5px;
+}
+
+nav{
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bar-btn{
+  font-size:25px;
+  color: white;
+  margin-right: 20px;
+  cursor: pointer;
+  margin-left:6px;
+  z-index:2;
+
+}
+.nav-menu{
+  position:fixed;
+  width: 100%;
+  height: 0vh;
+  top: 100px;
+  background: rgb(0, 0, 0);
+  text-align: center;
+  transition:all .5s;
+}
+
+.nav-menu li{
+  display: none;
+  line-height:30px;
+  margin: 50px 0 0 0;
+  transition:all .5s;
+}
+
+.nav-menu li a{
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight:600;
+}
+
+.nav-menu li a.active, .nav-menu li a:hover{
+  color: red;
+  transition: .3s;
+}
+
+#check{
+  display: none;
+}
+
+#check:checked ~ .nav-menu{
+  height: 100vh;
+}
+
+#check:checked ~ .nav-menu li{
+  display: block
+}
+
+.banner-text{
+  padding:0 30px;
+  margin-top: 150px;
+  text-align: center;
+  color: #fff;
+}
+
+.banner-text h1{
+  font-size: 50px;
+  font-weight: 2000;
+  margin-bottom: 30px;
+}
+
+.banner-text span{
+  color: red;
+}
+.banner-text h2{
+  font-size: 16px;
+  font-weight:600;
+}
+
+.container {
+  /*position: relative;*/
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 35px 0px 25px 75px;
+  margin: -150px 0px 300px -70px
+ 
+}
+
+.container .card{
+  position: relative;
+  max-width: 223px;
+  height: 215px;
+  background-color: rgba(168, 14, 14, 0.658);
+  margin: 208px 10px 30px 10px;
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0,0,0,0,5);
+  transition: 0.3s ease-in-out;
+}
+
+.container .card:hover{
+  height: 600px;
+}
+
+.container .card .gib {
+  position: relative;
+  width: 200px;
+  height: 1000px;
+  top: -60px;
+  left: 13px;
+  z-index: 1;
+  box-shadow: 0 5px 20px rgba(0,0,0,0,2);
+}
+
+.container .card .gib img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.container .card .content {
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15 px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.container .card:hover .content{
+  visibility: visible;
+  opacity: 1;
+  margin-top: -40px;
+  transition-delay: 0.3s;
+}
+
+.contact {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  z-index: 10;
+}
+
+.contact .fixed-mail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1d1d1d91;
+  padding: 15px;
+  border-radius: 100%;
+  margin: 10px;
+}
+
+.contact .fixed-wp {
+  background-color: #1d1d1d91;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 100%;
+  margin: 10px;
+  text-align: center;
+}
+
+.contact a i{
+  font-size: 50px;
+  color: white;
+}
+
+@media(max-width: 768px){
+  h1{
+    font-size: 50px;
+    text-align: center;
+  }
+
+  h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    font-size:20px;
+    color:white;
+    text-align: center;
+    padding: 25px 0px 0px 0px;
+    }
+  p{
+    font-size: 7px;
+}
+  img {
+    box-sizing: border-box;  
+    box-shadow: 5px 5px 5px 5px #000000; 
+    margin:-8px; 
+  }
+  .nav-menu{
+    position:fixed;
+    z-index: 50;
+    width: 100%;
+    height: 0vh;
+    top: 100px;
+    background: rgb(0, 0, 0);
+    text-align: center;
+    transition:all .5s;
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    padding: 35px 0px 25px 0px;
+    margin: -200px 0px 0px 0px;
+  }
+  
+  .container .card{
+    position: relative;
+    max-width: 223px;
+    height: 220px;
+    background-color: rgba(168, 14, 14, 0.658);
+    margin: 208px 10px 30px 10px;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0,0,0,0,5);
+    transition: 0.3s ease-in-out;
+  }
+
+  .container .card:hover{
+    height: 400px;
+  }
+
+  .container .card .gib {
+    position: relative;
+    width: 260px;
+    height: 600px;
+    top: -30px;
+    left: 39px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0,0,0,0,2);
+  }
+
+  .container .card .gib img {
+    max-width: 60%;
+    border-radius: 4px;
+  }
+
+  .container .card .content {
+    position: relative;
+    margin-top: 0px;
+    padding: 5px 10 px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+  }
+
+  .container .card:hover .content{
+    visibility: visible;
+    opacity: 1;
+    margin-bottom: 83px;
+    transition-delay: 0.3s;
+  }
+}
+
+
+@media(max-width: 320px){
+  h1{
+    font-size: 40px;
+    text-align: center;
+
+  }
+
+  h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    font-size:20px;
+    color:white;
+    text-align: center;
+    padding: 25px 0px 0px 0px;
+    }
+  p{
+    font-size: 7px;
+}
+  img {
+    box-sizing: border-box;  
+    box-shadow: 5px 5px 5px 5px #000000; 
+    margin:-15px; 
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    padding: 35px 0px 25px 75px;
+    margin: -200px 0px 0px 0px;
+  }
+  
+  .container .card{
+    position: relative;
+    max-width: 223px;
+    height: 220px;
+    background-color: rgba(168, 14, 14, 0.658);
+    margin: 208px 10px 30px 10px;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0,0,0,0,5);
+    transition: 0.3s ease-in-out;
+  }
+
+  .container .card:hover{
+    height: 400px;
+  }
+
+  .container .card .gib {
+    position: relative;
+    width: 260px;
+    height: 600px;
+    top: -30px;
+    left: 39px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0,0,0,0,2);
+  }
+
+  .container .card .gib img {
+    max-width: 60%;
+    border-radius: 4px;
+  }
+
+  .container .card .content {
+    position: relative;
+    margin-top: 0px;
+    padding: 5px 10 px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+  }
+
+  .container .card:hover .content{
+    visibility: visible;
+    opacity: 1;
+    margin-bottom: 83px;
+    transition-delay: 0.3s;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  nav{
+      height: 100px;
+  }
+  .bar-btn{
+      display: none;
+  }
+
+  .nav-menu{
+      position: relative;
+      height: 100px;
+      top: 0;
+      background: none;
+      transition: none;
+      text-align:center;
+      margin: right 50px;
+  }
+
+  .nav-menu li {
+      display: inline-flex;
+      line-height:100px;
+      margin: 0 20px;
+      transition:none;
+  }
+
+  .nav-menu li a {
+      font-size:16px;
+  }
+
+  .banner-text h2{
+      font-size:20px;
+  }
+}
