@@ -10,7 +10,7 @@
 
 body{
   font-family: 'Montserrat', sans-serif;
-  background-image: url(image/destacados.jpg);
+  background-image: url(/images/destacados.jpg);
   /*background-repeat: no-repeat;*/
   background-position:center;
   background-size: cover;
