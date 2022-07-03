@@ -9,7 +9,7 @@ var homeRouter = require('./routes/home')
 var productosRouter = require('./routes/productos')
 var galeriaRouter = require('./routes/galeria')
 var contactoRouter = require('./routes/contacto')
-var formularios_registroRouter = require('./routes/registro')
+var registroRouter = require('./routes/registro')
 
 var app = express();
 
@@ -28,7 +28,7 @@ app.use('/home', homeRouter);
 app.use('/productos', productosRouter);
 app.use('/galeria', galeriaRouter);
 app.use('/contacto', contactoRouter);
-app.use('/registro', formularios_registroRouter);
+app.use('/registro', registroRouter);
 
 
 

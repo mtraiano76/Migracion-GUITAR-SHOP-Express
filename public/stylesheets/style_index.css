@@ -20,7 +20,7 @@ h1{
 header{
   width: 100%;
   height: 100vh;
-  background-image: url(images/fondo.jpg);
+  background-image: url(/images/fondo.jpg);
   background-repeat: no-repeat;
   background-position:center;
   background-size: cover;
@@ -267,3 +267,118 @@ nav{
     transition: .5s;
   }
 }
+
+footer{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  padding-bottom: 15px;
+  }
+
+footer .principal{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1900px;
+  font-size: 18px;
+  text-align: center;
+  }
+
+footer .text{
+  display: flex;
+  flex-direction: column;
+  justify-content: c;
+  align-items: center;
+}
+
+footer .principal div{
+  margin: 10px;
+  padding: 5px;
+  max-width: 250px;
+}
+
+footer .principal .text img{
+  width: 250px;
+}
+
+footer .social-media-menu ul{
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .social-media-menu ul li{
+  font-size: 50px;
+  padding: 15px;
+  list-style:none; /*sacamos las viñetas de la lista*/
+}
+
+
+footer .links h3{
+  text-align: center;
+}
+
+footer .links ul{
+  padding: 0px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .links ul li{
+  font-size: 1.1em;
+  padding: 15px;
+  list-style:none;/*sacamos las viñetas de la lista*/
+}
+
+footer .links ul li a :hover {
+  background-color : #1d1d1d;
+  cursor:pointer;
+}
+
+footer ul li a{
+  color: white;
+  text-decoration: none;
+}
+
+.contact {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  z-index: 10;
+}
+
+.contact .fixed-mail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1d1d1d91;
+  padding: 15px;
+  border-radius: 100%;
+  margin: 10px;
+}
+
+.contact .fixed-wp {
+  background-color: #1d1d1d91;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 100%;
+  margin: 10px;
+  text-align: center;
+}
+
+.contact a i{
+  font-size: 50px;
+  color: white;
+}
+
