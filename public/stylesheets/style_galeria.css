@@ -4,6 +4,7 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; 
   }
 
   body{
@@ -20,12 +21,11 @@
     margin-left: 20%;
   }
 
-
-
   h1{
-    font-size: 70px;
+   
     margin-left: 5px;
-    color: white
+    color: white;
+    font-family: 'Montserrat', sans-serif; 
   }
 
   /*Menu desplegable*/
@@ -53,6 +53,13 @@
     background: rgb(0, 0, 0);
     text-align: center;
     transition:all .5s;
+  }
+
+  a.nav-enlace{
+    text-decoration: none;
+  }
+  a.active{
+    text-decoration: none;
   }
   
   .nav-menu li{

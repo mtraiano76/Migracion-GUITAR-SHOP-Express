@@ -12,6 +12,8 @@ var productosRouter = require('./routes/productos')
 var galeriaRouter = require('./routes/galeria')
 var contactoRouter = require('./routes/contacto')
 var registroRouter = require('./routes/registro')
+var loginRouter = require('./routes/admin/login')
+const { application } = require('express');
 
 var app = express();
 
@@ -31,6 +33,7 @@ app.use('/productos', productosRouter);
 app.use('/galeria', galeriaRouter);
 app.use('/contacto', contactoRouter);
 app.use('/registro', registroRouter);
+app.use('/admin/login',loginRouter)
 
 
 
