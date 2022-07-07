@@ -10,6 +10,7 @@ var indexRouter = require('./routes/index');
 var homeRouter = require('./routes/home')
 var productosRouter = require('./routes/productos')
 var galeriaRouter = require('./routes/galeria')
+var novedadesRouter = require('./routes/novedades');
 var contactoRouter = require('./routes/contacto')
 var registroRouter = require('./routes/registro')
 var loginRouter = require('./routes/admin/login')
@@ -31,6 +32,7 @@ app.use('/', indexRouter);
 app.use('/home', homeRouter);
 app.use('/productos', productosRouter);
 app.use('/galeria', galeriaRouter);
+app.use('/novedades', novedadesRouter);
 app.use('/contacto', contactoRouter);
 app.use('/registro', registroRouter);
 app.use('/admin/login',loginRouter)
