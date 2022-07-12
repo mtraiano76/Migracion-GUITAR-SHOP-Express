@@ -67,6 +67,7 @@ app.use('/novedades', novedadesRouter);
 app.use('/contacto', contactoRouter);
 app.use('/registro', registroRouter);
 app.use('/admin/login', loginRouter)
+app.use('/admin/novedades', secured, adminRouter)
 
 
 //panel adminsitrador
