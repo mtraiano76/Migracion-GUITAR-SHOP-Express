@@ -23,4 +23,28 @@ router.get("/agregar",(req,res,next) =>{
 
 })
 
+router.post('/agregar', async(req, res, next) =>{
+  //console.log(req.body) //veo en consola si me trae titulo, subtitulo y cuerpo agregado en web
+  try{
+    if (req.body.titulo != "" && req.body.subtitulo != "" && req.body.cuerpo != ""){
+      await novedadesModel.insertNovedades(req.body)
+      res.redirect("/admin/novedades")
+      }else{ // volvemos a agregar
+        res.render("admin/agregar",{
+          layout: "admin/layout",
+          error: true,
+          message: "Todos los campos son requeridos" // vamos a agregar.hbs
+        })
+
+      }
+
+
+  }catch(error){
+    console.log(error)
+  }
+
+})
+
+
+
 module.exports = router;
