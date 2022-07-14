@@ -1,3 +1,4 @@
+const { Router } = require('express');
 var express = require('express');
 var router = express.Router();
 var novedadesModel = require ("../../models/novedadesModel")
@@ -59,6 +60,17 @@ router.get("/eliminar/:id" , async (req,res,next)=>{
   var id = req.params.id;
   await novedadesModel.deleteNovedadesByID(id);
   res.redirect("/admin/novedades")
+})
+
+//VISTA MODIFICAR FORM + DATOS DE CAMPOS PARA MODIFICAR
+
+router.get("/modificar/:id", async(req,res,next)=>{
+  var id = req.params.id;
+  var novedad = await novedadesModel.getNovedadesByID(id);
+  res.render("admin/modificar",{
+    layout:"admin/layout",
+    novedad
+  })
 })
 
 
