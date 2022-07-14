@@ -27,11 +27,12 @@
                 <tbody>
                     {{#each novedades}}
                     <tr>
+                        {{!-- comentario --}}
                         <th scope="row">{{id}}</th>
                         <td>{{titulo}}</td>
                         <td class="text-end">
                             <a href=""class='btn btn-secondary'><i class="fa-solid fa-pencil"></i></a>
-                            <a href=""class='btn btn-secondary'><i class="fa-solid fa-trash"></i></a>
+                            <a href="/admin/novedades/eliminar/{{id}}" class='btn btn-secondary'><i class="fa-solid fa-trash"></i></a>{{!-- vamos a novedadesModel --}}
                         </td>
                     </tr>
                     {{/each}}

@@ -14,7 +14,7 @@ router.get('/', async function(req, res, next) {
   });
 });
 
-//esto sirve para dar de alta las novedades
+//MUESTRA FORM ALTA DE NOVEDADES
 router.get("/agregar",(req,res,next) =>{
   res.render("admin/agregar",{// agregar hbs
     layout: "admin/layout"
@@ -23,6 +23,7 @@ router.get("/agregar",(req,res,next) =>{
 
 })
 
+//AGREGA LA NOVEDAD
 router.post('/agregar', async(req, res, next) =>{
   //console.log(req.body) //veo en consola si me trae titulo, subtitulo y cuerpo agregado en web
   try{
@@ -50,6 +51,16 @@ router.post('/agregar', async(req, res, next) =>{
   }
 
 })
+
+//ELIMINAR NOVEDAD
+
+router.get("/eliminar/:id" , async (req,res,next)=>{
+  console.log(req.params.id);
+  var id = req.params.id;
+  await novedadesModel.deleteNovedadesByID(id);
+  res.redirect("/admin/novedades")
+})
+
 
 
 
