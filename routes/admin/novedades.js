@@ -41,6 +41,12 @@ router.post('/agregar', async(req, res, next) =>{
 
   }catch(error){
     console.log(error)
+    res.render("admin/agregar",{
+      layout: "admin/layout",
+      error: true,
+      message: "No se carga la novedad" // mensaje para cuando no se guarda la novedad vamos a agregar.hbs
+    })
+
   }
 
 })

@@ -7,13 +7,13 @@ async function getNovedades(){
 }
 async function insertNovedades(obj){
     try{
-        var query = "insert into novedades set ?";
+        var query = "insert into novedades set ?"; //por ejemplo, si aca pongo novedade, muestra error de no se guarda novedad, ingresamos todo bien pero al buscar la tabla NOVEDADES, NO LA ENCUENTRA
         var rows = await pool.query(query,[obj]);
         return rows;
 
     }catch(error){
         console.log(error)
-        throw error;
+        throw error; // este codigo va si o si, va por un camino o va por el otro en cuanto a errores
     }
 }
 module.exports = {getNovedades, insertNovedades}
