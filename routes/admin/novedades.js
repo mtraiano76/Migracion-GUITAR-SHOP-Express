@@ -67,10 +67,41 @@ router.get("/eliminar/:id" , async (req,res,next)=>{
 router.get("/modificar/:id", async(req,res,next)=>{
   var id = req.params.id;
   var novedad = await novedadesModel.getNovedadesByID(id);
+
+
+
   res.render("admin/modificar",{
     layout:"admin/layout",
     novedad
   })
+})
+
+//ACTUALIZACION DE LOS DATOS
+
+router.post("/modificar", async(req,res,next)=>{
+  try{
+    var obj = {
+      titulo:req.body.titulo,
+      subtitulo:req.body.subtitulo,
+      cuerpo:req.body.cuerpo
+
+    }
+
+    await novedadesModel.modificarNovedadByID(obj, req.body.id)
+    res.redirect("/admin/novedades");
+
+
+
+  }catch(error){
+    console.log(error)
+    res.render("admin/modificar",{
+      layout:"admin/layout",
+      error:true,
+      message:"No se modifico la novedad"
+    })
+
+  }
+
 })
 
 
