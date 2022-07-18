@@ -2,11 +2,24 @@
 
 
 <h2>Novedades</h2>
+<div style="float:right; position:relative; 
+        bottom:35px; right:30px;">
+    <form action="/novedades" method="get">
+        <input type="search" name="q" {{#if q}} value="{{q}}" {{/if}}>
+        <button type="submit">Bucar</button>
+    </form>
+
+</div>
 {{#each novedades}}
-<div>
+<div style="marign-top:45px;">
     <h3>Titulo: {{titulo}}</h3>
     <h4>Subtitulo {{subtitulo}}</h4>
     <p>{{cuerpo}}</p>
     <hr />
 </div>
 {{/each}}
+{{#if is_search}}
+    {{#unless novedades.length}}
+        <p>No se encontraron resultados para <b>"{{q}}"</b></p>
+    {{/unless}}
+{{/if}}
