@@ -4,6 +4,7 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    text-align: center;
 }
 
 body {
@@ -18,7 +19,19 @@ body {
 h1 {
     font-size: 70px;
     margin-left: 5px;
+    text-align: left;
 }
+
+h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+h4{
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+
 
 /*Menu desplegable*/
 nav {
@@ -113,13 +126,6 @@ h2 {
     padding: 10px;
 }
 
-h3 {
-    font-weight: lighter;
-    font-size: 18px;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
 
 
 span {
