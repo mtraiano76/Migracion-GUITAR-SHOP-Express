@@ -5,6 +5,7 @@
 header h1 {
     bottom:0;
     color: red;
+    font-weight: bold;
 }
 
 .margenes{
@@ -13,4 +14,9 @@ header h1 {
 
 tbody{
     color: white;
+}
+
+a{
+    color: white;
+    text-decoration: none;
 }

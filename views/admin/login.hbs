@@ -3,15 +3,14 @@
         <div class="col">
             <form action="/admin/login" method="post">
                 <div class="mb-3">
-                    <input type="text" class="form-control"
-                        placeholder="Usuario" name="usuario">
+                    <input type="text" class="form-control" placeholder="Usuario" name="usuario">
                 </div>
                 <div class="mb-3">
-                    <input type="password" class="form-control"
-                        placeholder="Contraseña" name="password">
+                    <input type="password" class="form-control" placeholder="Contraseña" name="password">
                 </div>
                 <div class="col-auto">
-                     <button type="submit" class="btn btn-primary mb-3">Ingresar</button>
+                    <button type="submit" class="btn btn-primary mb-3">Ingresar</button>
+                    <button type="submit" class="btn btn-primary mb-3"><a href="/home">Home</a></button>
                 </div>
             </form>
             {{#if error}}
