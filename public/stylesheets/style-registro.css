@@ -21,6 +21,10 @@ h1{
   margin-left: 5px;
 }
 
+h2{
+  text-align: center;
+}
+
 nav{
   height: 100px;
   width: 100%;
