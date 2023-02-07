@@ -16,13 +16,13 @@ router.post('/', async function(req, res, next) {
   //con las var, capturamos los datos
   var nombre = req.body.nombre;
   var email = req.body.email;
-  var tel = req.body.tel;
+  var tel = req.body.telefono;
   var comentarios = req.body.comentarios;
-  //console.log(req.body.email) //solo para comprobar en consola que se esten comunicando la vista y el controlador
+  console.log(req.body.email) //solo para comprobar en consola que se esten comunicando la vista y el controlador
   var obj = {
     to: 'mtraiano76@gmail.com',
     subject: 'Contacto desde la pagina',
-    html: nombre + 'se contacto a traves de la web y quiere saber mas info a este correo: ' + email + '<br> Su tel es: ' + tel + '. Su comentario es: ' + comentarios + '.'
+    html: nombre  + 'se contacto a traves de la web y quiere saber mas info a este correo: ' + email + '<br> Su tel es: ' + tel + '. Su comentario es: ' + comentarios + '.'
 
   }
 
